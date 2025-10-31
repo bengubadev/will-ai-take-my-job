@@ -46,7 +46,7 @@ const ResultCard: React.FC<ResultCardProps> = ({ result, profession, onCheckAgai
       link.click();
       
       // 2. Open Twitter with pre-filled text, prompting them to upload
-      const text = `I asked if AI will take my ${profession} job. The oracle said... ${result}!\n\n(Proof attached! 😉) What about yours?\n\n@bengubadev #WillAITakeMyJob`;
+      const text = `I asked if AI will take my ${profession} job. The oracle said... ${result}!\n\n(Proof attached! 😉) What about yours?\n\n@gamemefunn #WillAITakeMyJob`;
       const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`;
       window.open(url, '_blank');
     })
