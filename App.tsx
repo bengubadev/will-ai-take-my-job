@@ -6,7 +6,7 @@ import ResultCard from './components/ResultCard';
 import Background3D from './components/Background3D';
 
 type Theme = 'dark' | 'light';
-const MOCK_CA = '0x1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t';
+const CA = '9e5BcNfan4A3siqMMFspNLYiGF3YJR3r8khWkggspump';
 
 const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
@@ -79,7 +79,7 @@ const App: React.FC = () => {
   };
   
   const handleCopyCa = () => {
-    navigator.clipboard.writeText(MOCK_CA).then(() => {
+    navigator.clipboard.writeText(CA).then(() => {
         setCaCopied(true);
         setTimeout(() => setCaCopied(false), 2000);
     });
@@ -155,7 +155,7 @@ const App: React.FC = () => {
       <footer className={`text-center w-full z-10 ${theme === 'dark' ? 'text-gray-500' : 'text-gray-600'}`}>
         <p className="text-2xl font-blackops-one">CA</p>
         <div className={`relative flex items-center justify-center gap-2 mt-1 mx-auto max-w-sm border p-2 ${theme === 'dark' ? 'border-gray-700' : 'border-gray-400'}`}>
-            <p className="text-sm tracking-widest truncate font-mono">{MOCK_CA}</p>
+            <p className="text-sm tracking-widest truncate font-mono">{CA}</p>
             <button 
                 onClick={handleCopyCa} 
                 className={`font-roboto-mono text-xs px-2 py-1 border transition-colors duration-200 ${theme === 'dark' ? 'border-gray-600 hover:bg-gray-700' : 'border-gray-500 hover:bg-gray-300'}`}
