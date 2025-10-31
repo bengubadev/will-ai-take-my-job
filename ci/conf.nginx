@@ -1,0 +1,12 @@
+server {
+    listen 80;
+    server_name will-ai-take-my-job.benguba.dev;
+    access_log /var/log/nginx/will-ai-take-my-job.benguba.dev.site_access.log;
+    error_log /var/log/nginx/will-ai-take-my-job.benguba.dev.site_error.log;
+
+    location / {
+        root /home/ubuntu/will-ai-take-my-job/dist;
+        index index.html;
+        try_files $uri /index.html =404;
+    }
+}
